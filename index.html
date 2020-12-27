@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ColorPicker</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    </head>
+    <body>
+        <header>
+            <input type="color">
+
+            <label for="r">R: </label><input id="r" type="number" min="0" max="255" value="0" />
+            <label for="g">G: </label><input id="g" type="number" min="0" max="255" value="0" />
+            <label for="b">B: </label><input id="b" type="number" min="0" max="255" value="0" />
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="hex">HEX: </label>
+                    </td>
+                    <td>
+                        #
+                    </td>
+                    <td style="position: relative;">
+                        <input id="hex" type="text" minlength="3" maxlength="6" size="26"/><button onclick="copy('hex')">Kopieren</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="rgb">RGB: </label>
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td style="position: relative;">
+                        <input id="rgb" type="text" size="26"/><button onclick="copy('rgb')">Kopieren</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="hsl">HSL: </label>
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td style="position: relative;">
+                        <input id="hsl" type="text" size="26"/><button onclick="copy('hsl')">Kopieren</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="hsl">CMYK: </label>
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td style="position: relative;">
+                        <input id="cmyk" type="text" size="26"/><button onclick="copy('cmyk')">Kopieren</button>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <main>
+            <canvas id="canvas"></canvas> 
+            <div class="dragAndDrop">
+                Datei hineinziehen
+            </div>
+
+            <input type="file" id="image" />
+        </main>
+        
+        <footer>
+
+        </footer>
+        
+        <script src="main.js"></script>
+    </body>
+</html>
